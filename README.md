@@ -133,12 +133,12 @@ Lista de lo implementado y dónde verlo en el código, según el menú de puntos
 
 ## Integrantes y contribuciones
 
-> **Por completar antes de entregar:** cada quien pone su nombre real y lo que aportó (el proyecto pide declarar la contribución de cada integrante).
+Las contribuciones corresponden a los commits de cada integrante en este repositorio.
 
 | Integrante | Usuario | Contribución principal |
 |---|---|---|
-| _(nombre)_ | [@dallycita](https://github.com/dallycita) | _(por completar)_ |
-| _(nombre)_ | [@Gotkissss](https://github.com/Gotkissss) | _(por completar)_ |
+| Diego Quixchan | [@Gotkissss](https://github.com/Gotkissss) | Renderer base y shaders procedurales de los planetas, pipeline del renderer (recorte contra el plano cercano, frustum culling y niveles de detalle), skybox, cámara 3D y bucle principal. |
+| Dally Ramírez | [@dallycita](https://github.com/dallycita) | Mallas e icoesferas con carga de OBJ, sistema solar (órbitas en la eclíptica y rotación propia), nave (física, colisiones y warp), recorrido automático, GIF y README. |
 
 ## Uso de IA
 
