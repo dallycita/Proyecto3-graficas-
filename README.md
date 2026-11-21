@@ -15,6 +15,8 @@ Vuelo por el sistema Aurelia: acercamiento a los planetas, warp entre cuerpos y 
 
 ▶️ **[Ver en YouTube](https://youtu.be/TWcWKBT_UZo)**
 
+Segundo video (prueba): ▶️ **[Ver en YouTube](https://youtu.be/MUq90zNS5Hs)**
+
 ---
 
 ## El sistema
@@ -139,8 +141,3 @@ Las contribuciones corresponden a los commits de cada integrante en este reposit
 |---|---|---|
 | Diego Quixchan | [@Gotkissss](https://github.com/Gotkissss) | Renderer base y shaders procedurales de los planetas, pipeline del renderer (recorte contra el plano cercano, frustum culling y niveles de detalle), skybox, cámara 3D y bucle principal. |
 | Dally Ramírez | [@dallycita](https://github.com/dallycita) | Mallas e icoesferas con carga de OBJ, sistema solar (órbitas en la eclíptica y rotación propia), nave (física, colisiones y warp), recorrido automático, GIF y README. |
-
-## Uso de IA
-
-Parte del código de este proyecto se escribió con ayuda de un asistente de IA (Claude). El
-renderer base y los shaders de los planetas vienen del Laboratorio 6.
