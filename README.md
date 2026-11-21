@@ -117,12 +117,28 @@ src/shaders/           Fragment shaders de cada cuerpo y de la nave
 src/demo.rs            Recorrido automático (GIF / cuadros)
 ```
 
-## Integrantes
+## Características del menú (para evaluación)
 
-| Integrante | Usuario |
-|---|---|
-| — | [@dallycita](https://github.com/dallycita) |
-| — | [@Gotkissss](https://github.com/Gotkissss) |
+Lista de lo implementado y dónde verlo en el código, según el menú de puntos:
+
+- **Planetas distinguibles (traslación + rotación):** 5 planetas y una luna — `scene::BODIES`, `scene::position`, `scene::spin`.
+- **Shaders propios y animados:** 9 fragment shaders en `src/shaders/` (sol que hierve, lava que pulsa, auroras de Nyx, bandas del gigante gaseoso…).
+- **Mapeo de normales (bump mapping procedural):** `common::bump_normal`, usado en la luna y los planetas rocosos.
+- **Subdivisión procedural de geometría:** icoesferas por subdivisión — `mesh::icosphere`.
+- **Navegación: aceleración/frenado/giro progresivos y marco del planeta cercano:** `ship::Ship::update`, `ship::nearest_anchor`.
+- **Colisión (no atravesar los cuerpos):** `ship::Ship::collide`, `camera::Camera::update`.
+- **Descarte por frustum y niveles de detalle:** `render::outside_frustum`, `render::lod_level`.
+- **Warp animado:** `ship::Ship::update` (warp) + `render::warp_effect`.
+- **Órbitas y skybox:** `render::draw_orbits`, `src/skybox.rs`.
+
+## Integrantes y contribuciones
+
+> **Por completar antes de entregar:** cada quien pone su nombre real y lo que aportó (el proyecto pide declarar la contribución de cada integrante).
+
+| Integrante | Usuario | Contribución principal |
+|---|---|---|
+| _(nombre)_ | [@dallycita](https://github.com/dallycita) | _(por completar)_ |
+| _(nombre)_ | [@Gotkissss](https://github.com/Gotkissss) | _(por completar)_ |
 
 ## Uso de IA
 

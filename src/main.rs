@@ -143,7 +143,7 @@ fn main() {
         let dt = last.elapsed().as_secs_f32().min(0.1);
         last = Instant::now();
 
-        let input = read_input(&window, &mut state, &mut paused);
+        let input = read_input(&window, &mut state, &mut paused, dt);
         state.step(&input, if paused { 0.0 } else { dt });
         if paused {
             // En pausa la cámara se sigue actualizando para poder cambiar de modo.
@@ -181,7 +181,7 @@ fn main() {
 }
 
 /// Traduce el teclado a una `Input` para la nave y aplica los atajos globales.
-fn read_input(window: &Window, s: &mut State, paused: &mut bool) -> Input {
+fn read_input(window: &Window, s: &mut State, paused: &mut bool, dt: f32) -> Input {
     let down = |k| window.is_key_down(k);
     let pressed = |k| window.is_key_pressed(k, KeyRepeat::No);
     let axis = |neg: bool, pos: bool| (pos as i32 - neg as i32) as f32;
@@ -221,7 +221,7 @@ fn read_input(window: &Window, s: &mut State, paused: &mut bool) -> Input {
         s.camera.mode = s.camera.mode.next();
     }
     if s.camera.mode == CameraMode::Overview {
-        let dt = 1.0 / 60.0;
+        // Usa el dt real del cuadro para que la velocidad no dependa de los FPS.
         if down(Key::J) {
             s.camera.overview_angle -= dt;
         }

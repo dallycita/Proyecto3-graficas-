@@ -157,6 +157,11 @@ impl Ship {
             let e = smoothstep(0.0, 1.0, w.t);
             let dest = arrival_point(w.target, t1);
             self.pos = w.from + (dest - w.from) * e;
+            // Arco sobre la ecliptica: el trayecto se eleva en el medio para no
+            // atravesar el sol (que esta en el plano y=0) ni cruzar otros cuerpos
+            // en linea recta. La elevacion es 0 al inicio y al final del warp.
+            let lift = (w.t * PI).sin() * ((dest - w.from).norm() * 0.17).min(14.0);
+            self.pos.y += lift;
             let (ty, tp) = yaw_pitch_towards(scene::position(w.target, t1) - dest);
             let turn = smoothstep(0.0, 0.7, w.t);
             self.yaw = lerp_angle(w.from_yaw, ty, turn);
