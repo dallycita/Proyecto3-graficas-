@@ -7,7 +7,13 @@ fragment shader). El proyecto parte del renderer y de los shaders procedurales d
 
 ![Recorrido por el sistema](docs/demo.gif)
 
-> **Video del recorrido:** _pendiente: agregar aquí el enlace o el archivo del video._
+## Video del recorrido
+
+Vuelo por el sistema Aurelia: acercamiento a los planetas, warp entre cuerpos y vuelta alrededor de ellos.
+
+[![Ver el recorrido completo en YouTube](https://img.youtube.com/vi/TWcWKBT_UZo/hqdefault.jpg)](https://youtu.be/TWcWKBT_UZo)
+
+▶️ **[Ver en YouTube](https://youtu.be/TWcWKBT_UZo)**
 
 ---
 
